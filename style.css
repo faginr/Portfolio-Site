@@ -19,6 +19,28 @@ body {
   z-index: 1;
 }
 
+#tool-tip {
+  color: whitesmoke;
+  background-color: rgb(40,50,50);
+  border: 1px solid rgb(40,50,50);
+  border-radius: 10px;
+  padding: 5px;
+  position: fixed;
+  right: 100px;
+  top: 45px;
+}
+
+#tool-tip:before {position: absolute;
+  top: -10px;
+  left:50%;
+  margin-left: -10px;
+  content:"";
+  display:block;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgb(40,50,50);
+}
+
 .nav-item {
   color: cornflowerblue;
   font-size: 1em;
@@ -56,7 +78,7 @@ body {
 
 #welcome-section {
   height: 100vh;
-  margin-top: -32px;
+  margin-top: -54px;
   margin-bottom: -26px;
 }
 
@@ -76,8 +98,21 @@ body {
 #welcome-text {
   position: relative;
   top: 30%;
-  font-size: 3em;
+  font-size: 5em;
   animation: fadein-text 3s;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.2),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#welcome-subtext {
+  position: relative;
+  top: 30%;
+  font-size: 1.25em;
+  animation: fadein-text 6s;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.2),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
 }
 
 @keyframes fadein-text {
@@ -93,6 +128,19 @@ body {
   padding: 1px;
   min-height: 70vh;
   text-align: center; 
+}
+
+#project-text {
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.2),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+  font-size: 3em;
+}
+
+#project-subtext {
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.2),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
 }
 
 .project-title > h1 {
@@ -153,14 +201,24 @@ img {
 /* =====Contact===== */
 
 #contact {
-  height: 70vh;
-  background-color: linen;
+  min-height: 70%;
+  background: linear-gradient(180deg, linen 65%, papayawhip 100%);
 }
 
 #contact > h1 {
   background-color: linen;
   margin-top: 0px;
   padding-top: 30px;
+  font-size: 2.5em;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.2),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#contact-subtext {
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.2),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
 }
 
 .contact-link {
